@@ -204,7 +204,7 @@ def main():
     builder = LatexBuilder(build_config.LATEX_PROJECT)
     builder.build_config()
     builder.build_figures()
-
+    os.popen("/Applications/Skim.app/Contents/MacOS/Skim ./thesisDvi2.pdf &")
 
 # Make it so!
 main()

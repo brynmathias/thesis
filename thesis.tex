@@ -4,7 +4,7 @@
 %seems to build faster without hyper
 % \documentclass{agb_thesis}
 \usepackage{AGB_thesis}
-
+% \usepackage{hepnicenames, hepunits, hepparticles}
 \makeatletter
 \@ifpackageloaded{hyperref}{%
 \hypersetup{%
@@ -19,27 +19,32 @@
 
 \begin{document}
 \linenumbers 
-\title{Some Thesis}
-\author{Some Author}
+\title{Searching for SUSY in all hadronic final states with the $\alpha_{T}$ variable}
+\author{Bryn Mathias}
    
 \begin{frontmatter} 
-\titlepage[Other \\ Stuff]
-{More \\ Stuff}
+\titlepage[Imperial College London]
+{Supervisor: Dr Alex Tapper}
 \input{chapters/Preface.tex}
 \end{frontmatter}
   
 \begin{mainmatter}
 %%NOTE LOWER CASE 'i' IN INCLUDE
 \input{chapters/Introduction}
-
+\input{chapters/Theory}
+\input{chapters/CMS}
+\input{chapters/LoneTrigger}
+\input{chapters/objectDeffinitions}
+\input{chapters/RA1Analysis}%Triggers go here as well
+\input{chapters/Conclusion}
 \end{mainmatter}
     
 % \appendix
-% \input{chapters/Appendix}
+\input{chapters/Appendix}
 
-% \begin{backmatter}
-% \bibliographystyle{plain}
-% \bibliography{thesis}
-% \end{backmatter}
+\begin{backmatter}
+\bibliographystyle{plain}
+\bibliography{thesis}
+\end{backmatter}
 
 \end{document}
