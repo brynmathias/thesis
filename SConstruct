@@ -32,7 +32,7 @@ class LatexBuilder(object):
         self.makeindex_file_list = [self.latex_project + x
                                     for x in build_config.MAKEINDEX_EXTENSIONS]
 
-        self.figures = {'eps': [],
+        self.figures = {'pdf': [],
                         'pdf': [],
                         'png': [],
                         'jpg': [],
@@ -95,7 +95,7 @@ class LatexBuilder(object):
         """Find all figures in the modules and add them to my list."""
         for chapter in self.chapter_configs.keys():
             module = self.chapter_configs[chapter]
-            self.figures['eps'].extend([os.path.join(chapter, x)
+            self.figures['pdf'].extend([os.path.join(chapter, x)
                                         for x in Split(module.EPS_FIGURES)])
             self.figures['pdf'].extend([os.path.join(chapter, x)
                                         for x in Split(module.PDF_FIGURES)])
@@ -122,7 +122,7 @@ class LatexBuilder(object):
     def _collect_figures_from_dirs(self):
         """Find all figures in the modules and add them to my list."""
         for chapter in self.chapters:
-            for extension in ['eps', 'pdf', 'png', 'jpg', 'gnuplot']:
+            for extension in ['pdf', 'pdf', 'png', 'jpg', 'gnuplot']:
                 new_files = self._find_files(chapter,
                                              build_config.FILE_EXTENSIONS[extension])
                 self.figures[extension].extend(new_files)
@@ -134,7 +134,7 @@ class LatexBuilder(object):
             gnuplot_file = os.path.join(build_config.IMAGES_DIRECTORY,
                                         item + build_config.FILE_EXTENSIONS['gnuplot'])
             eps_file = os.path.join(build_config.GENERATED_DIRECTORY,
-                                    item + build_config.FILE_EXTENSIONS['eps'])
+                                    item + build_config.FILE_EXTENSIONS['pdf'])
             pdf_file = os.path.join(build_config.GENERATED_DIRECTORY,
                                     item + build_config.FILE_EXTENSIONS['pdf'])
             env.Gnuplot(source=gnuplot_file, target=eps_file)
@@ -150,7 +150,7 @@ class LatexBuilder(object):
             png_file = os.path.join(build_config.IMAGES_DIRECTORY,
                                     item + build_config.FILE_EXTENSIONS['png'])
             eps_file = os.path.join(build_config.GENERATED_DIRECTORY,
-                                    item + build_config.FILE_EXTENSIONS['eps'])
+                                    item + build_config.FILE_EXTENSIONS['pdf'])
             env.Png2eps(eps_file, png_file)
             env.Depends(self.dvi_output, eps_file)
 
@@ -161,7 +161,7 @@ class LatexBuilder(object):
             jpg_file = os.path.join(build_config.IMAGES_DIRECTORY,
                                     item + build_config.FILE_EXTENSIONS['jpg'])
             eps_file = os.path.join(build_config.GENERATED_DIRECTORY,
-                                    item + build_config.FILE_EXTENSIONS['eps'])
+                                    item + build_config.FILE_EXTENSIONS['pdf'])
             env.Jpg2eps(eps_file, jpg_file)
             env.Depends(self.dvi_output, eps_file)
 
@@ -170,7 +170,7 @@ class LatexBuilder(object):
         """Build PDF2EPS targets."""
         for item in pdf_figures:
             eps_file = os.path.join(build_config.GENERATED_DIRECTORY,
-                                    item + build_config.FILE_EXTENSIONS['eps'])
+                                    item + build_config.FILE_EXTENSIONS['pdf'])
             pdf_file = os.path.join(build_config.IMAGES_DIRECTORY,
                                     item + build_config.FILE_EXTENSIONS['pdf'])
             env.Pdf2eps(eps_file, pdf_file)
@@ -181,7 +181,7 @@ class LatexBuilder(object):
         """Build EPS2PDF targets."""
         for item in eps_figures:
             eps_file = os.path.join(build_config.IMAGES_DIRECTORY,
-                                    item + build_config.FILE_EXTENSIONS['eps'])
+                                    item + build_config.FILE_EXTENSIONS['pdf'])
             pdf_file = os.path.join(build_config.GENERATED_DIRECTORY,
                                     item + build_config.FILE_EXTENSIONS['pdf'])
             env.Eps2pdf(pdf_file, eps_file)
@@ -194,7 +194,7 @@ class LatexBuilder(object):
         self._build_png(self.figures['png'])
         self._build_jpg(self.figures['jpg'])
         self._build_pdf(self.figures['pdf'])
-        self._build_eps(self.figures['eps'])
+        self._build_eps(self.figures['pdf'])
 
 
 def main():
@@ -204,7 +204,9 @@ def main():
     builder = LatexBuilder(build_config.LATEX_PROJECT)
     builder.build_config()
     builder.build_figures()
+    os.popen("killall Skim")
     os.popen("/Applications/Skim.app/Contents/MacOS/Skim ./thesisDvi2.pdf &")
+    os.popen('''osascript -e 'tell application "Skim" to activate' ''')
 
 # Make it so!
 main()

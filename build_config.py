@@ -12,7 +12,7 @@ DEFAULT_TARGET = 'dvi2pdf'
 # --- Things below should mostly not need touching. ---
 # Some rather fixed configurations.
 
-IMAGES_DIRECTORY = 'images'
+IMAGES_DIRECTORY = 'figures'
 GENERATED_DIRECTORY = 'generated'
 CHAPTER_DIRECTORY = 'chapters'
 
