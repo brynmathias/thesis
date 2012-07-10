@@ -7,7 +7,7 @@ build project.
 LATEX_PROJECT = 'thesis'
 
 # Default target.
-DEFAULT_TARGET = 'dvi2pdf'
+DEFAULT_TARGET = 'pdf'#'dvi2pdf'
 
 # --- Things below should mostly not need touching. ---
 # Some rather fixed configurations.

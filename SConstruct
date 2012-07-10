@@ -205,7 +205,7 @@ def main():
     builder.build_config()
     builder.build_figures()
     os.popen("killall Skim")
-    os.popen("/Applications/Skim.app/Contents/MacOS/Skim ./thesisDvi2.pdf &")
+    os.popen("/Applications/Skim.app/Contents/MacOS/Skim ./thesis.pdf &")
     os.popen('''osascript -e 'tell application "Skim" to activate' ''')
 
 # Make it so!

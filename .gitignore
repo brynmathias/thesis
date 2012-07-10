@@ -17,6 +17,8 @@ generated/*
 *.nav
 *.nlo
 *.out
+.sconsign.dblite
+*.pyc
 *.pdfsync
 *.ps
 *.snm
