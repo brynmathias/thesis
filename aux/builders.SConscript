@@ -22,7 +22,7 @@ eps_builder = Builder(action='convert -enhance $SOURCE $TARGET',
 env.Append(BUILDERS={'Pdf2eps': eps_builder})
 
 ## png2eps builder. 
-png_builder = Builder(action='convert -enhance $SOURCE eps3:$TARGET',
+png_builder = Builder(action='convert  $SOURCE $TARGET',
                       suffix=build_config.FILE_EXTENSIONS['pdf'],
                       src_suffix=build_config.FILE_EXTENSIONS['png'])
 env.Append(BUILDERS={'Png2eps': png_builder})
