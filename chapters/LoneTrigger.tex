@@ -8,88 +8,122 @@
 \end{figure}
 
 
-The CMS \Lone trigger system\cite{l1} is a pipelined dead-timeless system based on custom-built electronics.
-The \Lone trigger is a combination of several sub systems, which are interconnected as depicted in
+The CMS \Lone trigger system\cite{l1} is a pipelined dead-timeless system based 
+on custom-built electronics.
+The \Lone trigger is a combination of several sub systems, which are 
+interconnected as depicted in 
 Figure~\ref{fig:figures_LoneTrigger_level1trigger}.
 
-Corse grain information from the electro-magnetic, hadronic and forward calorimeters is processed by the Regional Calorimeter
-Trigger (RCT), this is then passed to the Global Calorimeter Trigger (GCT) where the corse grain information is clustered in to
-physics objects, these objects are then passed to the Global Trigger where the \Lone accept decision is made. Due to the limited
+Corse grain information from the electro-magnetic, hadronic and forward 
+calorimeters is processed by the Regional Calorimeter
+Trigger (RCT), this is then passed to the Global Calorimeter Trigger (GCT) 
+where the corse grain information is clustered in to
+physics objects, these objects are then passed to the Global Trigger where the 
+\Lone accept decision is made. Due to the limited
 size of the pipe line this \Lone accept must be issued within 4.0 $\mu$s.
 
-The objects passed from the GCT to the GT include electro-magnetic objects, both electrons and photons as due to the lack of
-tracking information at the \Lone trigger these objects are indistinguishable, jets and energy sums.
+The objects passed from the GCT to the GT include electro-magnetic objects, 
+both electrons and photons as due to the lack of
+tracking information at the \Lone trigger these objects are indistinguishable, 
+jets and energy sums.
 
-The RCT generates up to 72 isolated and non-isolated electro-magnetic objects, these are sorted by rank, which is equivalent to
-transverse energy \ET. The four highest ranked electro-magnetic objects are then passed via the GCT to the GT at an equivalent data 
+The RCT generates up to 72 isolated and non-isolated electro-magnetic objects, 
+these are sorted by rank, which is equivalent to
+transverse energy \ET. The four highest ranked electro-magnetic objects are 
+then passed via the GCT to the GT at an equivalent data 
 rate of 29 \Gbs per type.
 
-Hadronic objects under go two clustering steps. First the transverse energy sums of the ECAL and corresponding HCAL towers are
-calculated, the towers are then summed in to 4$\times$4 trigger regions, these are passed to the GCT at a data rate of 172.8 \Gbs.
-These trigger regions are clustered in to jet candidates by the GCT and ranked. The jets are then sub-divided in the 
-categories depending on their pseudo-rapidity and the result of $\tau$ identification. 
+Hadronic objects under go two clustering steps. First the transverse energy 
+sums of the ECAL and corresponding HCAL towers are
+calculated, the towers are then summed in to 4$\times$4 trigger regions, these 
+are passed to the GCT at a data rate of 172.8 \Gbs.
+These trigger regions are clustered in to jet candidates by the GCT and ranked. 
+The jets are then sub-divided in the 
+categories depending on their pseudo-rapidity and the result of $\tau$ 
+identification. 
 
-Energy sums come in two forms, the total transverse energy \ET which is the scalar sum of all transverse energies and the total 
-jet transverse energy \HT which is calculated as the scalar sum of all jets above some programable threshold.
+Energy sums come in two forms, the total transverse energy \ET which is the 
+scalar sum of all transverse energies and the total 
+jet transverse energy \HT which is calculated as the scalar sum of all jets 
+above some programable threshold.
 
-The missing energy equivalents of these \MET and \MHT are formed from the negative vector sum of the objects considered for the
+The missing energy equivalents of these \MET and \MHT are formed from the 
+negative vector sum of the objects considered for the
 transverse sums.
 
 
 
+\section{Leve-1 Trigger Jet Algorithm} % (fold)
+\label{sec:leve_1_trigger_jet_algorithm}
 
-% \paragraph{The Regional Calorimeter Trigger (RCT)} % (fold)
-% \label{par:the_regional_calorimeter_trigger_rct_}
-% The RCT sums the transverse energies from the HCAL and ECAL to form jet candidates, these are then passed to the GCT at a rate of 
-% 172.8 \Gbs for the construction of jets. The RCT also constructs up to 72 isolated electron and photon candidates and up to 
-% 72 non isolated electron and photon candidates. The four highest rank of each of these are then passed to the global trigger at a 
-% rate is 29 \Gbs
-% % paragraph the_regional_calorimeter_trigger_rct_ (end)
-% 
-% \textbf{Some stuff about each of the sub systems}
+\textbf{FIXME:this is taken pretty much straight from \cite{gctcomm} might want 
+to steal less??} 
 
-% \section{GCT Hadronic triggers} % (fold)
-% \label{sec:gct_hadronic_triggers}
-% The global calorimeter trigger is responsible for forming hadronic jets in the central and forward sections of the hadronic 
-% calorimeters, there is a separate algorithm for forming hadronic $\tau$ jets. First 108 internal jets are formed and ordered, these 
-% jets are then used to calculate \HT and \MHT. The four highest energy jets then have their energy corrected, by passing though a
-% look up table which is dependent on \ET and \mETA, these jets are then passed to the Global Trigger so that the final trigger
-% decision can be made.
-
-\textbf{THIS IS BY NO MEANS FINISHED, NEED TO DISCUSS IN DEPTH THE L1 JET FINDING AND THE PERFORMANCE AT LOW PU OF
-BOTH SETS OF CORRECTIONS. PERFORMANCE IN 2011 THEN MOVE ON TO WHY ITS IMPORTANT TO DO SOME SORT OF PILE UP
-CORRECTION. REMEMBER TO USE THE FOLLOWING IMAGE!!! Figure~\ref{fig:figures_LoneTrigger_HTT150_pileup}}
+The CMS detector can be un-rolled in the $\phi$ direction to form a rectangular 
+grid of the 396 calorimeter regions, connected along the $\phi$ edge. The
+rectangle 18 $\phi$ divisions (from $-180^{\circ} < \phi \leq 180^{\circ}$) by 22 
+$\eta$ divisions ( from $-5 < \eta < 5$). Each $\phi$ division corresponds to 
+20$^{\circ}$. The $\eta$ divisions correspond to $\Delta\eta$ $= 0.5$ in the 
+forward calorimeters and to $\Delta\eta \approx 0.348$ in the barrel.
+A pictorial representation of this can be seen in 
+figure~\ref{fig:figures_LoneTrigger_jetfindermappings}.
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=\textwidth]{figures/LoneTrigger/jetfindermappings.png}
+  \caption{caption}
+  \label{fig:figures_LoneTrigger_jetfindermappings}
+\end{figure}
 
 
 
 
-\subsection{Level-1 Trigger Jet Algorithm} % (fold)
-\label{sec:Level-1 Trigger Jet Algorythm}
-
-The jet finding algorithm \cite{gctcomm} at \Lone finds local maxima from $3\times3$ blocks of trigger regions. The central trigger region
-is required to have $E_{T}^{cen} \geq E_{T}^{surrounding}$, however there is no direct requirement on the energy deposited in the central
-region.
+% section leve_1_trigger_jet_algorithm (end)
 
 
 
-Due to the lack of a requirement of a jet seed threshold, soft non-collimated jets, such as
-those expected in a high pile up environment are found. Trigger decisions are then made using these pile up jets.
 
-This is less of a problem for the single jet triggers which have a high $P_{T}$ threshold.
-However the \HT triggers, where \HT = $\sum_{jets}E_{T}^{jet}$ and the requirement of \ET$^{jet} \geq $10 \GeV is made,
-see a large increase in rate due to pile-up, this is due to the low energy threshold required for a jet to be added to the \HT sum.
 
-To counteract the effect of pile up on trigger rate we study the effects of requiring a jet
-seed threshold on the rate and efficiency of the individual jet and \HT triggers.
 
-Figure~\ref{fig:figures_level1jetalgo} depicts 3$\times$3 trigger regions, each of which are built from 4$\times$4 trigger towers.
-In this case the central region is the jet seed. The proposed change would require there to be a threshold energy in the seed
-region.
 
-The study of using jet seed thresholds of 2 and 5 \GeV is presented. The maximum energy of effected jets is 18 \GeV when 
-requiring a seed of 2 \GeV and 45 \GeV when requiring a seed of 5 \GeV for jets made from $3\times3$ trigger regions, however 
-some jets can include more than 9 trigger regions. The jet clustering is performed before the \Lone jets are corrected according 
-to their \ET and $\eta$, hence the effects are manifested in trigger decisions for \Lone jets above 18 or 45 \GeV.
+
+
+
+
+
+
+\section{\Lone Trigger Performance} % (fold)
+\label{sub:lone_trigger_performance}
+
+% subsection lone_trigger_performance (end)
+
+\section{\Lone Trigger Pile-up Mitigation} % (fold)
+\label{sub:lone_trigger_pile_up_mitigation}
+Due to the lack of a requirement of a jet seed threshold, soft non-collimated 
+jets, such as those expected in a high pile up environment are found. Trigger 
+decisions are then made using these pile up jets.
+
+This is less of a problem for the single jet triggers which have a high $P_{T}$ 
+threshold. However the \HT triggers, where \HT = $\sum_{jets}E_{T}^{jet}$ and 
+the requirement of \ET$^{jet} \geq $10 \GeV is made,
+see a large increase in rate due to pile-up, this is due to the low energy 
+threshold required for a jet to be added to the \HT sum.
+
+To counteract the effect of pile up on trigger rate we study the effects of 
+requiring a jet seed threshold on the rate and efficiency of the individual jet 
+and \HT triggers.
+
+Figure~\ref{fig:figures_level1jetalgo} depicts 3$\times$3 trigger regions, each 
+of which are built from 4$\times$4 trigger towers.
+In this case the central region is the jet seed. The proposed change would 
+require there to be a threshold energy in the seed region.
+
+The study of using jet seed thresholds of 2 and 5 \GeV is presented. The 
+maximum energy of effected jets is 18 \GeV when requiring a seed of 2 \GeV and 
+45 \GeV when requiring a seed of 5 \GeV for jets made from $3\times3$ trigger 
+regions, however some jets can include more than 9 trigger regions. The jet 
+clustering is performed before the \Lone jets are corrected according 
+to their \ET and $\eta$, hence the effects are manifested in trigger decisions 
+for \Lone jets above 18 or 45 \GeV.
 
 
 
@@ -108,22 +142,24 @@ to their \ET and $\eta$, hence the effects are manifested in trigger decisions f
 \end{figure}
 
 
-Figure~\ref{fig:GCTrank} shows how the different threshold requirements effect the rank of the internal GCT jets.
-The effect is to remove all jets below 2(5)\GeV and to cut out jets from the low end of the distribution. 
-From Figure~\ref{fig:GCTrankRatio} it is possible to see the point beyond which the requirement of a jet seed has no effect. 
-For a cut of 2 \GeV jets above a rank of $\approx$ 35 are not effected, for a seed threshold of 5 \GeV jets above a 
+Figure~\ref{fig:GCTrank} shows how the different threshold requirements effect 
+the rank of the internal GCT jets. The effect is to remove all jets below 
+2(5)\GeV and to cut out jets from the low end of the distribution. From 
+Figure~\ref{fig:GCTrankRatio} it is possible to see the point beyond which the 
+requirement of a jet seed has no effect. For a cut of 2 \GeV jets above a rank 
+of $\approx$ 35 are not effected, for a seed threshold of 5 \GeV jets above a 
 rank of 55 are not effected.
 
 
-% section gct_hadronic_triggers (end)
-
-
-\begin{figure}[htbp]
+\begin{figure}[ht]
   \centering
     \includegraphics[width=\textwidth]{figures/LoneTrigger/HTT150_pileup.pdf}
   \caption{caption}
   \label{fig:figures_LoneTrigger_HTT150_pileup}
 \end{figure}
+
+
+% subsection lone_trigger_pile_up_mitigation (end)
 
 
 % chapter level_one_trigger (end)
