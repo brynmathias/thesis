@@ -56,20 +56,56 @@ transverse sums.
 \section{Leve-1 Trigger Jet Algorithm} % (fold)
 \label{sec:leve_1_trigger_jet_algorithm}
 
-\textbf{FIXME:this is taken pretty much straight from \cite{gctcomm} might want 
-to steal less??} 
+\textbf{FIXME: This is taken pretty much straight from \cite{gctcomm} might 
+want to steal less??} 
 
 The CMS detector can be un-rolled in the $\phi$ direction to form a rectangular 
 grid of the 396 calorimeter regions, connected along the $\phi$ edge. The
-rectangle 18 $\phi$ divisions (from $-180^{\circ} < \phi \leq 180^{\circ}$) by 22 
-$\eta$ divisions ( from $-5 < \eta < 5$). Each $\phi$ division corresponds to 
-20$^{\circ}$. The $\eta$ divisions correspond to $\Delta\eta$ $= 0.5$ in the 
+rectangle 18 $\phi$ divisions (from $-180^{\circ} < \phi \leq 180^{\circ}$) by 
+22 $\eta$ divisions ( from $-5 < \eta < 5$). Each $\phi$ division corresponds 
+to 20$^{\circ}$. The $\eta$ divisions correspond to $\Delta\eta$ $= 0.5$ in the 
 forward calorimeters and to $\Delta\eta \approx 0.348$ in the barrel.
 A pictorial representation of this can be seen in 
 figure~\ref{fig:figures_LoneTrigger_jetfindermappings}.
+
 \begin{figure}[ht]
   \centering
-    \includegraphics[width=\textwidth]{figures/LoneTrigger/jetfindermappings.png}
+    \includegraphics[width=\textwidth]{figures/LoneTrigger/level1jetalgo.jpg}
+  \caption{The 3 $\times$ 3 jet-finder window at \Lone. Each cell represents a 
+  trigger tower, which is the sum of the HCAL and ECAL transverse energies. The 
+  $\tau$-jet veto patterns are shown to the right.}
+  \label{fig:figures_LoneTrigger_level1jetalgo}
+\end{figure}
+
+
+A jet candidate is created if the sum of the ECAL and HCAL energies of the 
+central calorimeter region has an energy deposit larger than all of its 
+neighbours, as shown in figure~\ref{fig:figures_LoneTrigger_level1jetalgo}
+The jet is centered at this region where $p_{T}^{central} > p_{T}^{surrounding}$
+and the transverse energies of the surrounding regions are summed in to the 
+central region. The jet is then classified as a $\tau$ jet if \mETA $< 3.0$ and 
+none of the $\tau$ veto bits are set. If any $\tau$ vetoes are set the jet is 
+classified as a central jet. The jet is classified as forward if $ 3.0 < \mETA 
+< 5.0$
+
+The $\tau$-vetoes are set by the RCT depending on whether or not the energy 
+depositions in up to four contiguous trigger towers are below a programmable 
+fraction of the regional \ET as shown in 
+Figure~\ref{fig:figures_LoneTrigger_level1jetalgo}.
+
+It is possible to apply separate jet energy corrections to each of the sub 
+categories of GCT jets. These corrections are discussed in detail in 
+Section~\ref{sec:lone_trigger_performance}
+
+
+\textbf{FIXME: Do we want to add some stuff on the pre-clustering here, i think 
+that the answer is yes, but how much?!?!}
+
+
+
+\begin{figure}[ht]
+  \centering    
+  \includegraphics[width=\textwidth]{figures/LoneTrigger/jetfindermappings.png}
   \caption{caption}
   \label{fig:figures_LoneTrigger_jetfindermappings}
 \end{figure}
@@ -92,9 +128,9 @@ figure~\ref{fig:figures_LoneTrigger_jetfindermappings}.
 
 
 \section{\Lone Trigger Performance} % (fold)
-\label{sub:lone_trigger_performance}
+\label{sec:lone_trigger_performance}
 
-% subsection lone_trigger_performance (end)
+% section lone_trigger_performance (end)
 
 \section{\Lone Trigger Pile-up Mitigation} % (fold)
 \label{sub:lone_trigger_pile_up_mitigation}
