@@ -110,9 +110,42 @@ that the answer is yes, but how much?!?!}
   \label{fig:figures_LoneTrigger_jetfindermappings}
 \end{figure}
 
+In order to reduce the total data duplicated and shared between the jet finders
+the GCT employs a pre-clustering algorithm, which involves 18 jet finders 
+operating simultaneously over the whole detector. These jet finders then only
+share information with neighboring regions when the clustered jets are found.
+Figure~\ref{fig:figures_LoneTrigger_jetfindermappings} shows the boundaries 
+between which the jet finders operate, these map naturally on to one RCT crate 
+per jet finder. A maximum of 3 jets can be found on each of the $\phi$ strips
+acted on by the jet finders, this gives a maximum of 108 jets per event. In
+order to preserve continuity across the $\eta = 0$ boundary, the two adjacent
+trigger regions are shared between the jet finders.
 
 
+\begin{figure}[ht]
+  \centering
+ \includegraphics[width=\textwidth]{figures/LoneTrigger/jetfinderfunction.png}
+  \caption{caption}
+  \label{fig:figures_LoneTrigger_jetfinderfunction}
+\end{figure}
 
+
+An example of the jet finding is shown in
+Figure~\ref{fig:figures_LoneTrigger_jetfinderfunction}. The first step
+is to create a $2 \times 3$ mini cluster around any local maxima found in the 
+$12 \times 2$ strip. Equality statements are imposed so that the central cell
+is greater than its neighbors in some directions and greater than or equal to
+the neighbors other directions to enforce a gap of at least one trigger region
+in both $\eta$ and $\phi$ between the centers of the clustered jets.
+
+In the second step the jet finder transfers the three largest mini clusters on 
+a given $\phi$ strip to the closest $\phi$ strip on the neighboring jet finder.
+These are then compared against the existing mini clusters in that $\phi$ strip,
+those that are adjacent or diagonally agecent to a larger mini cluster are 
+removed. The inequalities statements are then reimposed to prevent problems
+with clusters having the same energies. In the final stages the mini clusters
+have their three adjacent regions summed in to produce a $3 \times 3$ jet
+cluster.
 % section leve_1_trigger_jet_algorithm (end)
 
 
