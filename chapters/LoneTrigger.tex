@@ -185,11 +185,13 @@ for \Lone jets above 18 or 45 \GeV.
 
 \begin{figure}[h!]
     \centering
-    \subfigure[GCT jet $E_{T}$ distributions for the same events with a 0, 2 or 5 \GeV seed requirement.]{
+    \subfigure[GCT internal uncorrected jet \ET distributions for the same 
+    events with a 0, 2 or 5 \GeV seed requirement.]{
           \label{fig:GCTrankRAW}
           \includegraphics[width=0.45\textwidth]{generated/LoneTrigger/GCT_Jet_Rank_highPU.pdf}
      }
-    \subfigure[Efficiency of applying a requirement of 2 or 5 \GeV with respect to no requirement.]{
+    \subfigure[Efficiency of applying a requirement of 2 or 5 \GeV with respect 
+    to no requirement.]{
           \label{fig:GCTrankRatio}
           \includegraphics[width=0.45\textwidth]{generated/LoneTrigger/GCT_Jet_Rank_highPU_ratio.pdf}
      }
@@ -202,12 +204,12 @@ Figure~\ref{fig:GCTrank} shows how the different threshold requirements effect
 the rank of the internal GCT jets. The effect is to remove all jets below 
 2(5)\GeV and to cut out jets from the low end of the distribution. From 
 Figure~\ref{fig:GCTrankRatio} it is possible to see the point beyond which the 
-requirement of a jet seed has no effect. For a cut of 2 \GeV jets above a rank 
-of $\approx$ 35 are not effected, for a seed threshold of 5 \GeV jets above a 
-rank of 55 are not effected.
+requirement of a jet seed has no effect. For a cut of 2 \GeV jets above an 
+uncorrected \ET of $\approx$ 35 \GeV are not effected, for a seed threshold of 
+5 \GeV jets above an uncorrected \ET 55 \GeV are not effected.
 
 
-\section{Effect on trigger rates} % (fold)
+\subsection{Effect on trigger rates} % (fold)
 \label{sec:Effects on Rate}
 The effects of applying a seed threshold are quantified in terms of the level of rate
 reduction in the \Lone hadronic triggers.
@@ -267,16 +269,17 @@ L1$\_$Jet50 & $100.0 + 0.0 - 12.3\%$ & $85.7 + 9.1 - 15.8\%$\\
 
 \end{table}
 
-Table~\ref{tab:lowpuratereduction} shows the rate reduction of requiring a 2 or 5 \GeV seed threshold with respect to requiring no
-seed threshold.
+Table~\ref{tab:lowpuratereduction} shows the rate reduction of requiring a 2 or 
+5 \GeV seed threshold with respect to requiring no seed threshold.
 
 % subsection Low Pile Up (end)
 
 \subsection{High Pile Up} % (fold)
 \label{sub:High Pile Up}
-Pile up is expected to add a small quantity of energy to the entire calorimeter system, this
-energy comes in the form of soft non-collimated jets. These objects are then not reconstructed if the topological cut of applying
-a seed threshold is required.
+Pile up is expected to add a small quantity of energy to the entire calorimeter 
+system, this energy comes in the form of soft non-collimated jets. These 
+objects are then not reconstructed if the topological cut of applying a seed
+threshold is required.
 
 \begin{figure}[h!]
     \centering
@@ -293,9 +296,12 @@ a seed threshold is required.
           \label{fig:quadJetHighPU}
           \includegraphics[width=0.46\textwidth]{figures/LoneTrigger/QuadJet_38Cen_HighPU_RateReduction.pdf}
      }
-    \caption{Rate reductions for various \Lone algorithms when applying a 2,5 \GeV seed tower requirement, in high pile up
-    conditions. Figure (a) shows the rate reduction for \HT triggers at high pile up, in cut steps of 25 \GeV. Figure (b) shows
-    the rate reduction for jets with in $|\eta| <3.$ and $\pt > 50$\GeV. Figure (c) shows the rate reduction for a quad jet
+    \caption{Rate reductions for various \Lone algorithms when applying a 2,5 
+    \GeV seed tower requirement, in high pile up
+    conditions. Figure (a) shows the rate reduction for \HT triggers at high 
+    pile up, in cut steps of 25 \GeV. Figure (b) shows
+    the rate reduction for jets with in $|\eta| <3.$ and $\pt > 50$\GeV. Figure 
+    (c) shows the rate reduction for a quad jet
     trigger, with jet $|\eta| <3.$ and $\pt > 38$\GeV}
     
     \label{fig:highpuratereduction}
@@ -318,23 +324,15 @@ L1$\_$Jet50 & $100.0 + 0.0 - 7.7\%$ & $73.9 + 9.8 - 12.3\%$\\
 \end{tabular}
 \label{tab:highpuratereduction}
 \end{table}
-Table~\ref{tab:highpuratereduction} shows the rate reduction of requiring a 2 or 5 \GeV seed threshold with respect to requiring
-no seed threshold in high pile up conditions.
+Table~\ref{tab:highpuratereduction} shows the rate reduction of requiring a 2 
+or 5 \GeV seed threshold with respect to requiring no seed threshold in high 
+pile up conditions.
 
 
 % subsection High Pile Up (end)
 
-\subsection{Summary of the effects on trigger rates} % (fold)
-\label{sub:Summary of the effects on trigger rates}
-Applying a jet seed threshold is shown to greatly reduce the rate of the \Lone hadronic triggers in high pile up conditions.
-% Section~\ref{sub:High Pile Up} shows that we cut the rate of the L1$\_$HTT triggers by upto 99$\%$ in high pile up conditions,
-
-
-
-% subsection Summary of the effects on trigger rates (end)
-
 % section Effects on Rate (end)
-\section{Effect on trigger efficiency} % (fold)
+\subsection{Effect on trigger efficiency} % (fold)
 \label{sec:Effects of requiring a jet seed on offline efficiency}
 Section~\ref{sec:Effects on Rate} shows that requiring a jet seed threshold
 substantially reduces the trigger acceptance rate at in high pile up conditions.
@@ -386,30 +384,9 @@ Where loose calorimeter ID is defined as; Electro-Magnetic fraction $> 0.01$, fr
 \end{figure}
 
 
-\subsection{Efficiency of Jet Triggers} % (fold)
-\label{sub:Efficiency of Jet Triggers}
-Figure~\ref{fig:cenJetLowPURECO} shows the change in acceptance of jets in low 
-pile up conditions when the two seed thresholds are required. The effect is on 
-the order of a few percent for each of the thresholds. Requiring a 2 \GeV seed 
-reduces the efficiency for jets above 50 \GeV by $\approx 2.5\%$, whilst 
-requiring a 5\GeV seed reduces the efficiency of the same jets by $\approx 4\%$.
-% subsection Efficiency of Jet Triggers (end)
 
-\subsection{Efficiency of MultiJet Triggers} % (fold)
-\label{sub:Efficiency of MultiJet Triggers}
-Figure~\ref{fig:quadJetLowPURECO} shows that the effect of requiring a seed 
-threshold of 2 \GeV has no effect on the efficiency of the quad jet 38 \GeV 
-trigger and requiring a seed threshold of 5 \GeV reduces the efficiency of the 
-quad jet 38 trigger by $8\%$. The change in rate is dramatic in high pile up 
-conditions where for a 2 \GeV seed threshold the rate is reduced by 
-$\approx 30\%$ and by $\approx 40\%$ when requiring a 5 \GeV seed.
-However it is to be noted that the sample where this measurement has been made 
-is of limited size, inferring a reasonably large statistical uncertainty. 
-% subsection Efficiency of MultiJet Triggers (end)
-
-
-\subsection{Efficiency of \HT Triggers} % (fold)
-\label{sub:Efficneicy of HT triggers}
+\paragraph{Efficiency of \HT Triggers} % (fold)
+\label{par:Efficneicy of HT triggers}
 Figure~\ref{fig:HTlowPURECO} shows the acceptance reduction after applying the 
 two jet seed thresholds. The distribution is the cumulative number of events 
 passing a cut of $L1 HT^{cut}$ in bins of 25 \GeV. Due to \HT being the scalar 
@@ -426,16 +403,32 @@ reduced by $\geq 99\%$ when requiring a 5 \GeV seed threshold.
 % subsection Efficneicy of \HT triggers (end)
 
 
-\subsection{Summary of effects on efficiency} % (fold)
-\label{sub:Summary of effects on efficiency}
-The effect of applying a seed threshold to the single and multi jet triggers is 
-negligible when requiring a loose offline selection. The same is true for the 
-\HT triggers in low pile up conditions.
-% subsection Summary of effects on efficiency (end)
+\paragraph{Efficiency of Jet Triggers} % (fold)
+\label{par:Efficiency of Jet Triggers}
+Figure~\ref{fig:cenJetLowPURECO} shows the change in acceptance of jets in low 
+pile up conditions when the two seed thresholds are required. The effect is on 
+the order of a few percent for each of the thresholds. Requiring a 2 \GeV seed 
+reduces the efficiency for jets above 50 \GeV by $\approx 2.5\%$, whilst 
+requiring a 5\GeV seed reduces the efficiency of the same jets by $\approx 4\%$.
+% subsection Efficiency of Jet Triggers (end)
+
+\paragraph{Efficiency of MultiJet Triggers} % (fold)
+\label{par:Efficiency of MultiJet Triggers}
+Figure~\ref{fig:quadJetLowPURECO} shows that the effect of requiring a seed 
+threshold of 2 \GeV has no effect on the efficiency of the quad jet 38 \GeV 
+trigger and requiring a seed threshold of 5 \GeV reduces the efficiency of the 
+quad jet 38 trigger by $8\%$. The change in rate is dramatic in high pile up 
+conditions where for a 2 \GeV seed threshold the rate is reduced by 
+$\approx 30\%$ and by $\approx 40\%$ when requiring a 5 \GeV seed.
+However it is to be noted that the sample where this measurement has been made 
+is of limited size, inferring a reasonably large statistical uncertainty. 
+% subsection Efficiency of MultiJet Triggers (end)
+
+
 
 % section Effects of requiring a jet seed on offline efficiency (end)
 
-\section{Summary} % (fold)
+\subsection{Summary} % (fold)
 \label{sec:Summary}
 The effects of requiring a jet seed have been studied using the \Lone trigger 
 emulator on high and low pile-up samples. The studies show that requiring a jet 
