@@ -32,7 +32,7 @@ class LatexBuilder(object):
         self.makeindex_file_list = [self.latex_project + x
                                     for x in build_config.MAKEINDEX_EXTENSIONS]
 
-        self.figures = {'pdf': [],
+        self.figures = {'eps': [],
                         'pdf': [],
                         'png': [],
                         'jpg': [],
@@ -181,7 +181,7 @@ class LatexBuilder(object):
         """Build EPS2PDF targets."""
         for item in eps_figures:
             eps_file = os.path.join(build_config.IMAGES_DIRECTORY,
-                                    item + build_config.FILE_EXTENSIONS['pdf'])
+                                    item + build_config.FILE_EXTENSIONS['eps'])
             pdf_file = os.path.join(build_config.GENERATED_DIRECTORY,
                                     item + build_config.FILE_EXTENSIONS['pdf'])
             env.Eps2pdf(pdf_file, eps_file)
@@ -194,7 +194,7 @@ class LatexBuilder(object):
         self._build_png(self.figures['png'])
         self._build_jpg(self.figures['jpg'])
         self._build_pdf(self.figures['pdf'])
-        self._build_eps(self.figures['pdf'])
+        self._build_eps(self.figures['eps'])
 
 
 def main():
