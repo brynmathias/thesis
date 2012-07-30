@@ -1,3 +1,6 @@
 [submodule "chapters"]
 	path = chapters
 	url = git@github.com:brynmathias/thesis-chapters.git
+[submodule "figures"]
+	path = figures
+	url = git@github.com:brynmathias/thesis-figures.git
