@@ -335,6 +335,9 @@ INPUT /Users/bryn/github/thesis/chapters/Analysis.tex
 INPUT /Users/bryn/github/thesis/figures/Analysis/AlphaT_all_375_upwards.pdf
 INPUT /Users/bryn/github/thesis/figures/Analysis/AlphaT_all_375_upwards.pdf
 INPUT /Users/bryn/github/thesis/figures/Analysis/AlphaT_all_375_upwards.pdf
+INPUT /Users/bryn/github/thesis/figures/Analysis/flowChart.pdf
+INPUT /Users/bryn/github/thesis/figures/Analysis/flowChart.pdf
+INPUT /Users/bryn/github/thesis/figures/Analysis/flowChart.pdf
 INPUT /Users/bryn/github/thesis/chapters/Conclusion.tex
 INPUT /Users/bryn/github/thesis/chapters/Conclusion.tex
 INPUT /Users/bryn/github/thesis/chapters/Appendix.tex
@@ -355,6 +358,7 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.p
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb

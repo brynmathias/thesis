@@ -50,8 +50,8 @@ class LatexBuilder(object):
                                       '*.tex')
         self.chapters = [os.path.split(x)[-1][:-4]
                          for x in Glob(chapter_finder, strings=True)]
-    
-    
+        print self.chapters
+  
     def _get_chapter_configs(self):
         """Load the chapter config modules."""
         import_list = ['%s_config' % x for x in self.chapters]
@@ -204,9 +204,9 @@ def main():
     builder = LatexBuilder(build_config.LATEX_PROJECT)
     builder.build_config()
     builder.build_figures()
-    os.popen("killall Skim")
-    os.popen("/Applications/Skim.app/Contents/MacOS/Skim ./thesis.pdf &")
-    os.popen('''osascript -e 'tell application "Skim" to activate' ''')
+    # os.popen("killall Skim")
+    # os.popen("/Applications/Skim.app/Contents/MacOS/Skim ./thesis.pdf &")
+    # os.popen('''osascript -e 'tell application "Skim" to activate' ''')
 
 # Make it so!
 main()
