@@ -479,7 +479,7 @@
 %% ========================================================================
 
 \AtEndOfClass{%
-  \usepackage[babel]{csquotes}[2007/03/25]
+  \usepackage[babel]{}[2007/03/25]
   %% Provide dumb quoting commands in case the csquotes package hasn't been used.
   \providecommand{\enquote}[1]{``#1''}%
   \providecommand{\foreignquote}[1]{``#1''}%
