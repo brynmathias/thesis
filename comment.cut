@@ -1,2 +1,8 @@
-\bibliographystyle{plain}
-\bibliography{thesis}
+%%NOTE LOWER CASE 'i' IN INCLUDE
+\input{chapters/Introduction}
+\input{chapters/Theory}
+\input{chapters/CMS}
+\input{chapters/objectDeffinitions}
+\input{chapters/LoneTrigger}
+\input{chapters/Analysis}
+\input{chapters/Conclusion}

@@ -4,17 +4,18 @@
 %build with hyper
 %seems to build faster without hyper
 % \documentclass{agb_thesis}
-\usepackage{AGB_thesis}
+% \usepackage{AGB_thesis}
 \usepackage{slashed}
 \usepackage{ptdr-definitions}
-\usepackage{subfig}
+\usepackage{subfigure}
 \usepackage{xspace}
 \usepackage{hepnicenames}
 \usepackage{acronym}
 
 \acrodef{cms}[C.M.S]{The Compact Muon Solenoid}
-% \newcommand{\Lone}{Level-1}
 
+% \newcommand{\Lone}{Level-1}
+\acrodef{ml}[M.L]{Maximum likelihood}
 \usepackage{hepunits}
 \usepackage{hepparticles}
 \makeatletter
@@ -58,5 +59,7 @@
 \bibliographystyle{plain}
 \bibliography{thesis}
 \end{backmatter}
+\input{chapters/trigger_appendix}
+\input{chapters/backgroundestimation_appendix}
 
 \end{document}
