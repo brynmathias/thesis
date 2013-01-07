@@ -1,5 +1,6 @@
 generated/*
 *.aux
+*.html
 *.bbl
 *.blg
 *.dvi
