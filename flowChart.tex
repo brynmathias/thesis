@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\begin{document}
+\pagestyle{empty}
+
+
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{endblock} = [rectangle, draw, fill=red!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{actionblock} = [rectangle, draw, fill=green!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [block] (init) {L1 Accept};
+    \node [decision, below of=init, node distance= 3cm] (PassL1){Pass L1$\_$HTT trigger?};
+    \node [endblock, right of=PassL1, node distance=5cm] (evFail1){Reject Event.};
+    \node [block, below of=PassL1, node distance=3cm] (hltObj) {Construct HLT objects.};
+    \node [block, below of=hltObj, node distance=2cm] (jetCol) {Create Jet Collection.};
+    \node [decision, below of=jetCol, node distance=2cm] (nJets) {nJets $\ge$ 3? };
+    \node [actionblock, below of=nJets, node distance=3cm] (less4) { Calculate $\alpha_{T}$, $H_{T}$.};
+    \node [actionblock, left of=less4, node distance=3cm] (4ormore) { Calculate $\beta_{T}$, $H_{T}$.};
+    \node [decision, below of=less4, node distance=3cm] (passQ) {Pass trigger requirements?};
+    \node [endblock, below of=passQ, node distance=4cm] (pass) {Accept Event};
+    \node [decision, right of=passQ, node distance=5cm] (addJetsQ) {More jets in event with $p_{T} >$ Jet threshold?};
+    \node [endblock, below of=addJetsQ, node distance=4cm] (evFail2) {Reject Event};
+    \node [actionblock, above of=addJetsQ, node distance=3cm] (addJet) {Add a Jet to jet collection.};
+    % Draw edges
+    \path [line] (init) -- (PassL1);
+    \path [line] (PassL1) -- node {No}(evFail1);
+    \path [line] (PassL1) -- node {Yes}(hltObj);
+    \path [line] (hltObj) -- (jetCol);
+    \path [line] (jetCol) -- (nJets);
+    \path [line] (nJets) -- node {No}(less4);
+    \path [line] (nJets) -- node {Yes}(4ormore);
+    \path [line] (less4) -- (passQ);
+    \path [line] (4ormore) -- (passQ);
+    \path [line] (passQ) -- node {Yes} (pass);
+    \path [line] (passQ) -- node {No}(addJetsQ);
+    \path [line] (addJetsQ) -- node {No}(evFail2);
+    \path [line] (addJetsQ) -- node {Yes}(addJet);
+    \path [line] (addJet) -- node {} (nJets);
+\end{tikzpicture}
+
+
+\end{document}
