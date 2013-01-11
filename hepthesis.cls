@@ -568,7 +568,8 @@
 %% Environment for all the junk at the end of the thesis
 \let\@oldbackmatter\backmatter
 \specialcomment{backmatter}{%
-  \@oldbackmatter%
+%\@oldbackmatter%
+\@mainmatterfalse%
   \adjustwidth{\@backmatterextramargin}{\@backmatterextramargin}%
   \begin{\@backmatterspacing}%
   \appendix%
@@ -577,7 +578,6 @@
   \endadjustwidth%
   \ignorespacesafterend%
 }
-
 
 %% Environment for acknowledgements page in frontmatter
 \newenvironment{acknowledgements}{%

@@ -13,7 +13,10 @@
 \usepackage{acronym}
 \usepackage{todonotes}
 \acrodef{cms}[C.M.S]{The Compact Muon Solenoid}
-
+\acrodef{sm}[S.M]{Standard Model}
+\acrodef{susy}[SUSY]{SuperSymmetry}
+\acrodef{cmssm}[CMSSM]{Constrained Minimal SuperSymmetric Model}
+\acrodef{sms}[S.M.S]{Simplified Model Spectra}
 % \newcommand{\Lone}{Level-1}
 \acrodef{ml}[M.L]{Maximum likelihood}
 \usepackage{hepunits}
@@ -52,17 +55,20 @@
 \input{chapters/Conclusion}
 \end{mainmatter}
     
-\begin{appendix}
-\input{chapters/Appendix}
-\input{chapters/trigger_appendix}
-\input{chapters/backgroundestimation_appendix}
-\end{appendix}
+
 
 
 \begin{backmatter}
 \bibliographystyle{plain}
 \bibliography{thesis}
+
 \end{backmatter}
+\begin{appendices}
+\input{chapters/Appendix}
+\input{chapters/trigger_appendix}
+\input{chapters/backgroundestimation_appendix}
+\input{chapters/bkg_syst_appendix}
+\end{appendices}
 
 
 
