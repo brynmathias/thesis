@@ -1,5 +1,3 @@
-\input{chapters/Appendix}
-\input{chapters/trigger_appendix}
-\input{chapters/backgroundestimation_appendix}
-\input{chapters/bkg_syst_appendix}
-\input{chapters/sig_syst_appendix}
+\bibliographystyle{plain}
+\bibliography{thesis}
+
