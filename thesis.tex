@@ -43,12 +43,13 @@
 
 \begin{document}
 \linenumbers % comment this out to get rid of the line numbers
-\title{Searching for SUSY in all hadronic final states with the $\alpha_{T}$ variable}
+\title{Search for supersymmetry in pp collisions with all-hadronic final states using the \alt variable with the CMS detector at the LHC}
 \author{Bryn Mathias}
    
 \begin{frontmatter} 
 \titlepage[Imperial College London]
 {Supervisor: Dr Alex Tapper}
+
 \input{chapters/Preface.tex}
 \end{frontmatter}
   
@@ -57,9 +58,12 @@
 \input{chapters/Introduction}
 \input{chapters/Theory}
 \input{chapters/CMS}
-\input{chapters/objectDeffinitions}
 \input{chapters/LoneTrigger}
 \input{chapters/Analysis}
+% \input{chapters/objectDeffinitions}
+\input{chapters/reco_and_event_selection}
+\input{chapters/BackgroundEstimation}
+\input{chapters/Interpretation}
 \input{chapters/Conclusion}
 \end{mainmatter}
     
@@ -71,14 +75,14 @@
 \bibliography{thesis}
 
 \end{backmatter}
-\appendix
+\begin{appendix}
   \include{chapters/Appendix}
   \include{chapters/trigger_appendix}
   \include{chapters/backgroundestimation_appendix}
   \include{chapters/bkg_syst_appendix}
   \include{chapters/sig_syst_appendix}
 
-
+\end{appendix}
 
 
 \end{document}
