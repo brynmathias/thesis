@@ -9,6 +9,7 @@
 \usepackage{ptdr-definitions}
 \usepackage{subfigure}
 \usepackage{xspace}
+\usepackage{bm}
 \usepackage{hepnicenames}
 \usepackage{acronym}
 \usepackage{todonotes}
@@ -29,11 +30,29 @@
 \acrodef{lhc}[L.H.C]{Large Hadron Collider}
 \usepackage{hepunits}
 \usepackage{hepparticles}
-\makeatletter
-\@ifpackageloaded{hyperref}{%
-\hypersetup{%
+
+\newcount\colveccount
+\newcommand*\colvec[1]{
+        \global\colveccount#1
+        \begin{pmatrix}
+        \colvecnext
 }
-}{}
+\def\colvecnext#1{
+        #1
+        \global\advance\colveccount-1
+        \ifnum\colveccount>0
+                \\
+                \expandafter\colvecnext
+        \else
+                \end{pmatrix}
+        \fi
+}
+
+\makeatletter
+
+
+
+
 \makeatother
 
 % The path(s) to the graphics files:
