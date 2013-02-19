@@ -354,6 +354,8 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /Users/bryn/github/thesis/chapters/CMS.tex
 INPUT /Users/bryn/github/thesis/chapters/CMS.tex
 INPUT /Users/bryn/github/thesis/figures/CMS/cmsDetector.png
@@ -424,8 +426,6 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm7.t
 INPUT /Users/bryn/github/thesis/figures/LoneTrigger/GCT_Jet_Rank_highPU_ratio.pdf
 INPUT /Users/bryn/github/thesis/figures/LoneTrigger/GCT_Jet_Rank_highPU_ratio.pdf
 INPUT /Users/bryn/github/thesis/figures/LoneTrigger/GCT_Jet_Rank_highPU_ratio.pdf
-INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
-INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /Users/bryn/github/thesis/figures/LoneTrigger/HT_LowPU_RECO.pdf
 INPUT /Users/bryn/github/thesis/figures/LoneTrigger/HT_LowPU_RECO.pdf
 INPUT /Users/bryn/github/thesis/figures/LoneTrigger/HT_LowPU_RECO.pdf
