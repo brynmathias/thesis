@@ -13,24 +13,25 @@
 \usepackage{hepnicenames}
 \usepackage{acronym}
 \usepackage{todonotes}
-\acrodef{cms}[C.M.S]{The Compact Muon Solenoid}
-\acrodef{sm}[S.M]{Standard Model}
+\acrodef{cms}[CMS]{The Compact Muon Solenoid}
+\acrodef{sm}[SM]{Standard Model}
 \acrodef{cp}[CP]{Charge-Parity}
 \acrodef{susy}[SUSY]{SuperSymmetry}
 \acrodef{cmssm}[CMSSM]{Constrained Minimal SuperSymmetric Model}
-\acrodef{sms}[S.M.S]{Simplified Model Spectra}
+\acrodef{sms}[SMS]{Simplified Model Spectra}
 \acrodef{pdf}[PDF]{Parton Density Function}
-\acrodef{ml}[M.L]{Maximum likelihood}
-\acrodef{lhc}[L.H.C]{Large Hadron Collider}
-\acrodef{nlo}[N.L.O]{Next to Leading Order}
+\acrodef{ml}[ML]{Maximum likelihood}
+\acrodef{lhc}[LHC]{Large Hadron Collider}
+\acrodef{nlo}[NLO]{Next to Leading Order}
 \acrodef{nlonll}[NLO+NNL]{Next to Leading Order + Next Leading Log}
 \acrodef{rms}[RMS]{Root Mean Squared}
 \acrodef{lsp}[LSP]{Lightest SUSY Particle}
 \acrodef{jec}[JEC]{Jet Energy Corrections}
-\acrodef{csv}[C.S.V]{Combined Secondary Vertex}
-\acrodef{lhc}[LHC]{Large Hadron Collider}
+\acrodef{csv}[CSV]{Combined Secondary Vertex}
 \acrodef{lep}[LEP]{Large Electron-Positron Collider}
 \acrodef{gr}[GR]{General Relativity}
+\acrodef{bsm}[BSM]{Beyond the Standard Model}
+\acrodef{rpc}[RPC]{Restive Plate Chamber}
 \usepackage{hepunits}
 \usepackage{hepparticles}
 
@@ -91,12 +92,6 @@
     
 
 
-
-\begin{backmatter}
-\bibliographystyle{plain}
-\bibliography{thesis}
-
-\end{backmatter}
 \begin{appendix}
   \include{chapters/Appendix}
   \include{chapters/trigger_appendix}
@@ -105,6 +100,14 @@
   \include{chapters/sig_syst_appendix}
 
 \end{appendix}
+
+
+\begin{backmatter}
+\bibliographystyle{ieeetr}
+\bibliography{thesis}
+
+\end{backmatter}
+
 
 
 \end{document}

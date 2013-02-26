@@ -654,12 +654,6 @@ INPUT /Users/bryn/github/thesis/figures/Analysis/stats_plots/v8/T2tt_1D.pdf
 INPUT /Users/bryn/github/thesis/figures/Analysis/stats_plots/v8/T2tt_1D.pdf
 INPUT /Users/bryn/github/thesis/chapters/Conclusion.tex
 INPUT /Users/bryn/github/thesis/chapters/Conclusion.tex
-OUTPUT comment.cut
-INPUT /Users/bryn/github/thesis/comment.cut
-INPUT /Users/bryn/github/thesis/comment.cut
-INPUT /Users/bryn/github/thesis/thesis.bbl
-INPUT /Users/bryn/github/thesis/thesis.bbl
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 OUTPUT chapters/Appendix.aux
 INPUT /Users/bryn/github/thesis/chapters/Appendix.tex
 INPUT /Users/bryn/github/thesis/chapters/Appendix.tex
@@ -1118,6 +1112,12 @@ INPUT /Users/bryn/github/thesis/figures/Analysis/syst_plots/LepVeto_SMST1tttt-fa
 INPUT /Users/bryn/github/thesis/figures/Analysis/syst_plots/LepVeto_SMST1bbbb-far.pdf
 INPUT /Users/bryn/github/thesis/figures/Analysis/syst_plots/LepVeto_SMST1bbbb-far.pdf
 INPUT /Users/bryn/github/thesis/figures/Analysis/syst_plots/LepVeto_SMST1bbbb-far.pdf
+OUTPUT comment.cut
+INPUT /Users/bryn/github/thesis/comment.cut
+INPUT /Users/bryn/github/thesis/comment.cut
+INPUT /Users/bryn/github/thesis/thesis.bbl
+INPUT /Users/bryn/github/thesis/thesis.bbl
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /Users/bryn/github/thesis/thesis.aux
 INPUT /Users/bryn/github/thesis/chapters/Appendix.aux
 INPUT /Users/bryn/github/thesis/chapters/Appendix.aux
@@ -1131,7 +1131,7 @@ INPUT /Users/bryn/github/thesis/chapters/sig_syst_appendix.aux
 INPUT /Users/bryn/github/thesis/chapters/sig_syst_appendix.aux
 INPUT /Users/bryn/github/thesis/thesis.out
 INPUT /Users/bryn/github/thesis/thesis.out
-INPUT /Users/bryn/Library/texlive/2012/texmf-var/fonts/pk/ljfour/public/cm/cmttb10.864pk
+INPUT /Users/bryn/Library/texlive/2012/texmf-var/fonts/pk/ljfour/public/cm/cmttb10.1037pk
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
