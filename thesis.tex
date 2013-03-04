@@ -1,5 +1,5 @@
 %!TEX root = /Users/bryn/github/thesis/thesis.tex
-\documentclass[hyper,AGBdraft,nobind,oneside,noroman]{hepthesis}%change AGBdraft to final
+\documentclass[hyper,nobind,oneside,noroman]{hepthesis}%change AGBdraft to final
 %Note: for the final build, remove 'draft' and 'final' options and
 %build with hyper
 %seems to build faster without hyper
@@ -65,18 +65,28 @@
 % \listfiles
 
 \begin{document}
-\linenumbers % comment this out to get rid of the line numbers
-\title{Search for supersymmetry in pp collisions with all-hadronic final states using the \alt variable with the CMS detector at the LHC}
-\author{Bryn Mathias}
+% \linenumbers % comment this out to get rid of the line numbers
+% \title{Search for supersymmetry in pp collisions with all-hadronic final states using the \alt variable with the CMS detector at the LHC}
+% \author{Bryn Lough Shorney-Mathias}
    
 \begin{frontmatter} 
-\titlepage[Imperial College London]
-{Supervisor: Dr Alex Tapper}
+
+\titleGP
+\thispagestyle{empty}
+\pagenumbering{roman}
+% \setcounter{page}{1}
+
 
 \input{chapters/Preface.tex}
+\tableofcontents
+
+% \clearpage
 \end{frontmatter}
-  
+
 \begin{mainmatter}
+
+
+  
 %%NOTE LOWER CASE 'i' IN INCLUDE
 \input{chapters/Introduction}
 \input{chapters/Theory}
