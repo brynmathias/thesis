@@ -360,10 +360,9 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm7.t
 INPUT /Users/bryn/github/thesis/figures/Theory/T2.pdf
 INPUT /Users/bryn/github/thesis/figures/Theory/T2.pdf
 INPUT /Users/bryn/github/thesis/figures/Theory/T2.pdf
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT /Users/bryn/github/thesis/figures/Theory/mstw2008nlo68cl_allpdfs.pdf
+INPUT /Users/bryn/github/thesis/figures/Theory/mstw2008nlo68cl_allpdfs.pdf
+INPUT /Users/bryn/github/thesis/figures/Theory/mstw2008nlo68cl_allpdfs.pdf
 INPUT /Users/bryn/github/thesis/chapters/CMS.tex
 INPUT /Users/bryn/github/thesis/chapters/CMS.tex
 INPUT /Users/bryn/github/thesis/figures/CMS/cmsDetector.png
@@ -436,6 +435,10 @@ INPUT /Users/bryn/github/thesis/chapters/Analysis.tex
 INPUT /Users/bryn/github/thesis/chapters/Analysis.tex
 INPUT /Users/bryn/github/thesis/chapters/reco_and_event_selection.tex
 INPUT /Users/bryn/github/thesis/chapters/reco_and_event_selection.tex
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
 INPUT /Users/bryn/github/thesis/figures/Analysis/AlphaT_all_375_upwards.pdf
 INPUT /Users/bryn/github/thesis/figures/Analysis/AlphaT_all_375_upwards.pdf
 INPUT /Users/bryn/github/thesis/figures/Analysis/AlphaT_all_375_upwards.pdf
